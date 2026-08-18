@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Tic Tac Toe</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="min-h-screen bg-slate-950 text-white">
+    <main class="min-h-screen flex items-center justify-center px-4 py-8">
+      <div class="w-full max-w-md">
+        <header class="text-center mb-8">
+          <p
+            class="text-sm font-medium uppercase tracking-[0.3em] text-slate-500"
+          >
+            Classic Game
+          </p>
+
+          <h1 class="mt-2 text-4xl font-black tracking-tight">
+            Tic
+            <span class="text-cyan-400">Tac</span>
+            Toe
+          </h1>
+        </header>
+
+        <section class="grid grid-cols-2 gap-3 mb-5">
+          <!-- box for player x -->
+          <div
+            id="playerX"
+            class="rounded-2xl border-2 border-transparent border-cyan-400 bg-slate-900 p-4 transition-all duration-200"
+          >
+            <div class="flex items-center justify-between">
+              <div>
+                <p
+                  class="text-xs font-medium uppercase tracking-wider text-slate-500"
+                >
+                  Player
+                </p>
+
+                <p class="mt-1 text-xl font-black text-cyan-400">X</p>
+              </div>
+
+              <span id="xTeam" class="text-3xl font-black text-white"> 0 </span>
+            </div>
+          </div>
+
+          <!-- box for player o -->
+          <div
+            id="playerO"
+            class="rounded-2xl border-2 border-transparent border-pink-400 bg-slate-900 p-4 transition-all duration-200"
+          >
+            <div class="flex items-center justify-between">
+              <div>
+                <p
+                  class="text-xs font-medium uppercase tracking-wider text-slate-500"
+                >
+                  Player
+                </p>
+
+                <p class="mt-1 text-xl font-black text-pink-400">O</p>
+              </div>
+
+              <span id="oTeam" class="text-3xl font-black text-white"> 0 </span>
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="board"
+          class="grid grid-cols-3 gap-3 rounded-3xl border border-slate-800 bg-slate-900 p-3"
+        >
+          <button
+            class="cell aspect-square rounded-2xl bg-slate-800 text-4xl font-black transition-all duration-150 hover:bg-slate-700 active:scale-95"
+          ></button>
+
+          <button
+            class="cell aspect-square rounded-2xl bg-slate-800 text-4xl font-black transition-all duration-150 hover:bg-slate-700 active:scale-95"
+          ></button>
+
+          <button
+            class="cell aspect-square rounded-2xl bg-slate-800 text-4xl font-black transition-all duration-150 hover:bg-slate-700 active:scale-95"
+          ></button>
+
+          <button
+            class="cell aspect-square rounded-2xl bg-slate-800 text-4xl font-black transition-all duration-150 hover:bg-slate-700 active:scale-95"
+          ></button>
+
+          <button
+            class="cell aspect-square rounded-2xl bg-slate-800 text-4xl font-black transition-all duration-150 hover:bg-slate-700 active:scale-95"
+          ></button>
+
+          <button
+            class="cell aspect-square rounded-2xl bg-slate-800 text-4xl font-black transition-all duration-150 hover:bg-slate-700 active:scale-95"
+          ></button>
+
+          <button
+            class="cell aspect-square rounded-2xl bg-slate-800 text-4xl font-black transition-all duration-150 hover:bg-slate-700 active:scale-95"
+          ></button>
+
+          <button
+            class="cell aspect-square rounded-2xl bg-slate-800 text-4xl font-black transition-all duration-150 hover:bg-slate-700 active:scale-95"
+          ></button>
+
+          <button
+            class="cell aspect-square rounded-2xl bg-slate-800 text-4xl font-black transition-all duration-150 hover:bg-slate-700 active:scale-95"
+          ></button>
+        </section>
+
+        <section
+          id="result"
+          class="mt-5 hidden rounded-2xl border border-slate-800 bg-slate-900 p-5 text-center"
+        >
+          <p id="winnerText" class="text-2xl font-black"></p>
+
+          <p class="mt-1 text-sm text-slate-500">Ready for another round?</p>
+        </section>
+
+        <button
+          id="btn"
+          class="mt-5 w-full rounded-2xl bg-white py-3.5 font-bold text-slate-950 transition-all duration-150 hover:bg-slate-200 active:scale-[0.98]"
+        >
+          New Round
+        </button>
+      </div>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
